@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Privacy Policy — Proof</title>
+  <meta name="description" content="How Proof handles your photos and data: stored on your iPhone, analysed on device, deletable in the app.">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="/proof-legal/style.css">
+  <link rel="alternate" hreflang="en" href="https://taxulas.github.io/proof-legal/privacy/">
+  <link rel="alternate" hreflang="fr" href="https://taxulas.github.io/proof-legal/privacy/fr/">
+  <link rel="alternate" hreflang="de" href="https://taxulas.github.io/proof-legal/privacy/de/">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header>
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="/proof-legal/">Proof</a>
+      <nav class="main" aria-label="Sections"><a href="/proof-legal/privacy/" aria-current="page">Privacy</a><a href="/proof-legal/terms/">Terms</a><a href="/proof-legal/support/">Support</a></nav>
+    </div>
+    <div class="langs"><a href="/proof-legal/privacy/" hreflang="en" lang="en" aria-current="true">English</a><a href="/proof-legal/privacy/fr/" hreflang="fr" lang="fr">Français</a><a href="/proof-legal/privacy/de/" hreflang="de" lang="de">Deutsch</a></div>
+  </div>
+</header>
+<main id="content"><div class="wrap">
+
+<h1>Privacy Policy</h1>
+<p class="lede">Proof is built so that your photos stay on your iPhone.</p>
+<p class="meta">Last updated: 2026-09-06</p>
+
+<div class="card">
+<p><strong>In short.</strong> Proof stores your photos and your progress in the app's private storage
+on your iPhone. It does not require an account. It does not upload your photos to a Proof server.
+All image analysis runs on your device. There is no advertising and no advertising tracking.
+You can delete everything from inside the app.</p>
+</div>
+
+<h2>Who is responsible</h2>
+<p>Proof is an independent iPhone app. For any question about this policy or about your data, write to
+<a class="mail" href="mailto:proofapp.contact@gmail.com">proofapp.contact@gmail.com</a>.</p>
+
+<h2>What Proof processes, and where it is stored</h2>
+<p>Everything below is stored locally in the app's private storage area on your iPhone, protected by
+iOS app sandboxing and by your device encryption.</p>
+<ul>
+  <li><strong>Your photos.</strong> Photos you take with the in-app camera or choose from your photo
+  library are copied into a private folder belonging to the app. They are not written back to your
+  photo library and they are not sent anywhere.</li>
+  <li><strong>Analysis results.</strong> When Proof compares two photos, it computes geometric
+  information — silhouette outlines, body-pose points, framing, and comparability scores. These
+  results are numbers describing shape and alignment. They are stored next to your photos on the
+  device.</li>
+  <li><strong>Optional masked copies.</strong> If you turn on face masking, Proof creates a masked
+  copy of the photo on your device and uses that copy in the app and in anything you export.</li>
+  <li><strong>Your settings and progress.</strong> Your goal, weekly sessions, chosen language,
+  reminder setting, comparison history, and any measurement you enter yourself.</li>
+  <li><strong>Product usage events.</strong> Proof records short technical events such as "app
+  opened", "photo selected" or "analysis completed", together with small non-identifying values such
+  as a count or a score. These are kept in a local queue on the device, limited to the most recent
+  250 entries. <strong>In the current release they are not transmitted anywhere</strong> — see
+  "Components included but not active" below.</li>
+</ul>
+
+<h2>What Proof does not do</h2>
+<ul>
+  <li>It does not require or offer a Proof account, and asks for no name, email or phone number.</li>
+  <li>It does not upload your photos to a Proof server. Proof operates no server that receives your photos.</li>
+  <li>It does not show advertising and does not use advertising identifiers.</li>
+  <li>It does not track you across other apps or websites, and does not build advertising profiles.</li>
+  <li>It does not sell or rent personal data.</li>
+</ul>
+
+<h2>Analysis happens on your device</h2>
+<p>Proof uses Apple's Vision framework, which is part of iOS, to detect faces, body-pose points and
+silhouettes in your photos. This processing runs locally on your iPhone. Your photos are not sent to
+Apple by Proof for this analysis, and they are not sent to us.</p>
+
+<h2>Face masking</h2>
+<p>Face masking is optional and off unless you enable it. When enabled, Proof detects faces on the
+device and stores a masked copy. The behaviour is deliberately fail-closed: if a masked copy cannot
+be produced for a photo, that photo is hidden rather than shown unmasked.</p>
+
+<h2>Sharing is always your choice</h2>
+<p>Proof only shares an image when you explicitly ask it to. It then hands the file to the standard
+iOS share sheet, and you choose the destination. Once you send an image to another app or service,
+that app's own terms and privacy policy apply to it.</p>
+
+<h2>Notifications</h2>
+<p>If you enable the weekly reminder, Proof schedules a local notification on your device. It uses no
+push server, and no notification content leaves your iPhone.</p>
+
+<h2>Purchases</h2>
+<p>Any subscription or purchase offered in Proof is sold through the Apple App Store. Apple processes
+the payment and the billing relationship. Proof never sees or stores your payment card, and receives
+no payment details from Apple. Apple's handling of that data is governed by
+<a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's Privacy Policy</a>.</p>
+
+<h2>Components included but not active</h2>
+<p>We think it is fairer to tell you what is inside the app than to describe only what runs. The app
+bundle currently contains two third-party components that are <strong>not configured and not active
+in the released version</strong>, because no credentials for them are compiled into the build:</p>
+<ul>
+  <li><strong>A purchase SDK (RevenueCat).</strong> Included to support subscriptions, but not
+  initialised in the current release. It therefore processes no data and makes no network request.
+  If it is activated in a future version, it would receive purchase and device-level technical data
+  needed to validate a subscription — never your photos.</li>
+  <li><strong>A product-analytics integration (PostHog).</strong> Present in the code but disabled,
+  so usage events stay in the local queue described above and no analytics request is sent.
+  If it is ever enabled, it would receive only the product usage events described above under a
+  random identifier generated on the device — never your photos and never the analysis of them.</li>
+</ul>
+<p>This page will be updated before any such component becomes active in a released version.</p>
+
+<h2>Retention</h2>
+<p>Your data stays on your device until you remove it. Proof applies no server-side retention period,
+because it holds nothing on a server. Deleting the app from your iPhone removes the app's private
+storage, including your photos and analyses.</p>
+
+<h2>Deleting your data</h2>
+<p>You can erase everything from inside the app, in Settings, using the option to delete all data.
+This removes the stored app state and deletes the entire private photo folder, returning the app to
+the state of a fresh install. The only thing kept is the interface language you selected, which is a
+preference and not personal data.</p>
+
+<h2>Security</h2>
+<p>Your data is held in the app's sandboxed storage, which other apps cannot read, and is protected
+by the encryption iOS applies to your device. Keeping a passcode or Face ID enabled on your iPhone,
+and keeping iOS up to date, is the most effective protection for it. If you back up your iPhone to
+iCloud or to a computer, your Proof data may be included in that backup, which is then governed by
+the settings and terms of that backup service.</p>
+
+<h2>Children</h2>
+<p>Proof is intended for adults and is not directed at children.</p>
+
+<h2>Your rights</h2>
+<p>If you are in the European Economic Area or the United Kingdom, data protection law gives you
+rights of access, rectification, erasure, restriction, objection and portability.</p>
+<p>Because Proof keeps your photos, analyses and settings only on your own device and transmits none
+of it to us, we hold no copy of your data and have no way to identify you or to retrieve, export or
+delete your information on your behalf. In practice this means you exercise these rights directly and
+immediately in the app: your data is visible to you in the app, you can correct it by replacing or
+removing photos, and you can erase all of it with the delete option in Settings. If you believe
+something in this policy is inaccurate, or you want to ask a question about it, contact
+<a class="mail" href="mailto:proofapp.contact@gmail.com">proofapp.contact@gmail.com</a>. You also have the right to complain to your
+national data protection authority.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes, the updated version will be published on this page with a new date at the
+top. Material changes affecting what leaves your device will be reflected here before the version
+that makes the change is released.</p>
+
+<h2>Contact</h2>
+<p><a class="mail" href="mailto:proofapp.contact@gmail.com">proofapp.contact@gmail.com</a> &middot; see also our
+<a href="/proof-legal/support/">Support page</a> and <a href="/proof-legal/terms/">Terms of Use</a>.</p>
+</div></main>
+<footer><div class="wrap">
+  <p>Contact &middot; <a href="mailto:proofapp.contact@gmail.com">proofapp.contact@gmail.com</a></p>
+  <p><a href="/proof-legal/privacy/">Privacy</a> &middot; <a href="/proof-legal/terms/">Terms</a> &middot; <a href="/proof-legal/support/">Support</a></p>
+  <p>Last updated: 2026-09-06</p>
+</div></footer>
+</body>
+</html>
