@@ -1,6 +1,6 @@
 # Proof — legal and App Store launch-readiness packet
 
-Prepared: 2026-09-16  
+Prepared: 2026-09-16
 Scope: preparation only; no merge, publication, App Store Connect write, submission, purchase or build.
 
 This document is intentionally safe for a public pull request. It contains no private account value,
@@ -37,11 +37,11 @@ repository without explicit publication approval.
 
 **FACT** — A French sole proprietor can normally file the business-creation form from one month
 before the declared start of activity and, at the latest, within 15 days after that start. This is a
-filing window, not a recommendation to launch before the legal and Store disclosures are ready.  
-**SOURCE** — [Service-Public — Formalités de création d'une entreprise individuelle](https://entreprendre.service-public.fr/vosdroits/F36763)  
-**DATE CHECKED** — 2026-09-16  
+filing window, not a recommendation to launch before the legal and Store disclosures are ready.
+**SOURCE** — [Service-Public — Formalités de création d'une entreprise individuelle](https://entreprendre.service-public.fr/vosdroits/F36763)
+**DATE CHECKED** — 2026-09-16
 **APPLICABILITY** — Relevant only if/when commercial activity is carried on in France as a sole
-proprietor.  
+proprietor.
 **OWNER DECISION** — No start date is needed for this preparation packet. Decide timing only when a
 specific filing or commercial-opening decision is actually made.
 
@@ -49,12 +49,12 @@ specific filing or commercial-opening decision is actually made.
 
 **FACT** — The French government lists mandatory identity and contact notices for a professional
 website operated by an individual, including first/last name, address, email and telephone, plus
-hosting information and additional registration/VAT/activity details when applicable.  
-**SOURCE** — [Ministère de l’Économie — Mentions obligatoires sur un site internet](https://www.economie.gouv.fr/entreprises/developper-son-entreprise/innover-et-numeriser-son-entreprise/mentions-sur-votre-site-internet-les-obligations-respecter)  
-**DATE CHECKED** — 2026-09-16  
+hosting information and additional registration/VAT/activity details when applicable.
+**SOURCE** — [Ministère de l’Économie — Mentions obligatoires sur un site internet](https://www.economie.gouv.fr/entreprises/developper-son-entreprise/innover-et-numeriser-son-entreprise/mentions-sur-votre-site-internet-les-obligations-respecter)
+**DATE CHECKED** — 2026-09-16
 **APPLICABILITY** — Applies to a professional public site; the exact set depends on the operator's
 actual registration and activity. GitHub's public privacy notice does not supply a usable hosting
-support telephone number, so the host-notice implementation is not yet safely complete.  
+support telephone number, so the host-notice implementation is not yet safely complete.
 **OWNER DECISION** — Do not insert personal coordinates or invented registration data. Preserve the
 current live controller/contact section and add the complete notice only after existing Apple values
 have been read and publication of each value has been expressly approved.
@@ -62,19 +62,19 @@ have been read and publication of each value has been expressly approved.
 ### Sole proprietor, micro regime and company
 
 **FACT** — A micro-entrepreneur is an individual entrepreneur using a simplified tax/social regime;
-it is not a separate company. A sole proprietorship and a company are legally distinct structures.  
-**SOURCE** — [Ministère de l’Économie — Devenir micro-entrepreneur](https://www.economie.gouv.fr/particuliers/vie-en-entreprise/comment-devenir-micro-entrepreneur-auto-entrepreneur?page=1), [Service-Public — Entreprise individuelle ou société](https://entreprendre.service-public.fr/vosdroits/F37396)  
-**DATE CHECKED** — 2026-09-16  
-**APPLICABILITY** — Relevant to future French registration and Apple account strategy.  
+it is not a separate company. A sole proprietorship and a company are legally distinct structures.
+**SOURCE** — [Ministère de l’Économie — Devenir micro-entrepreneur](https://www.economie.gouv.fr/particuliers/vie-en-entreprise/comment-devenir-micro-entrepreneur-auto-entrepreneur?page=1), [Service-Public — Entreprise individuelle ou société](https://entreprendre.service-public.fr/vosdroits/F37396)
+**DATE CHECKED** — 2026-09-16
+**APPLICABILITY** — Relevant to future French registration and Apple account strategy.
 **OWNER DECISION** — This packet selects no legal, tax or social regime and invents no company.
 
 ### Business address
 
 **FACT** — A sole proprietor must choose a business address; available domiciliation routes and
-conditions depend on the real situation.  
-**SOURCE** — [Service-Public — Domicilier une entreprise individuelle](https://entreprendre.service-public.fr/vosdroits/F2160?quest0=0)  
-**DATE CHECKED** — 2026-09-16  
-**APPLICABILITY** — Relevant before completing mandatory public notices or trader coordinates.  
+conditions depend on the real situation.
+**SOURCE** — [Service-Public — Domicilier une entreprise individuelle](https://entreprendre.service-public.fr/vosdroits/F2160?quest0=0)
+**DATE CHECKED** — 2026-09-16
+**APPLICABILITY** — Relevant before completing mandatory public notices or trader coordinates.
 **OWNER DECISION** — Do not publish any address from Apple merely because it is readable there;
 separate factual verification from authorization to republish.
 
@@ -82,11 +82,11 @@ separate factual verification from authorization to republish.
 
 **FACT** — GDPR Article 13 requires transparent controller identity/contact and other processing
 information when personal data is collected. CNIL's mobile-app guidance emphasizes mobile-specific,
-accessible information and permission minimisation.  
-**SOURCE** — [CNIL — RGPD, chapitre III](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), [CNIL — Recommandation applications mobiles](https://www.cnil.fr/sites/cnil/files/2024-09/recommandation-applications-mobiles.pdf)  
-**DATE CHECKED** — 2026-09-16  
+accessible information and permission minimisation.
+**SOURCE** — [CNIL — RGPD, chapitre III](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), [CNIL — Recommandation applications mobiles](https://www.cnil.fr/sites/cnil/files/2024-09/recommandation-applications-mobiles.pdf)
+**DATE CHECKED** — 2026-09-16
 **APPLICABILITY** — RevenueCat processing is active; PostHog is conditional. Local-only photos are
-not received by the publisher.  
+not received by the publisher.
 **OWNER DECISION** — Privacy is `NEEDS OWNER INPUT` only for the remaining French registration facts
 and explicit authorization to republish legally necessary identity/contact values already held by
 Apple. The owner must not be asked to retype those Apple-held values.
@@ -135,10 +135,10 @@ except keywords, which are UTF‑8 bytes.
 **Name — 20/30**
 `Proof: Body Progress`
 
-**Subtitle — 29/30**  
+**Subtitle — 29/30**
 `Private before & after photos`
 
-**Promotional text — 134/170**  
+**Promotional text — 134/170**
 `Turn old progress photos into an immediate Reveal. Compare privately with consistent framing, then keep the full story with Proof Pro.`
 
 **Description — 1,081/4,000**
@@ -165,7 +165,7 @@ by the App Store before purchase.
 
 Proof is a visual progress tool, not a medical device or medical, nutritional or fitness advice.
 
-**Keywords — 97/100 bytes**  
+**Keywords — 97/100 bytes**
 `progress photos,before after,transformation,fitness,comparison,timeline,private,replay,body photo`
 
 ### French (France)
@@ -173,10 +173,10 @@ Proof is a visual progress tool, not a medical device or medical, nutritional or
 **Name — 20/30**
 `Proof: Body Progress`
 
-**Subtitle — 26/30**  
+**Subtitle — 26/30**
 `Photos avant/après privées`
 
-**Promotional text — 147/170**  
+**Promotional text — 147/170**
 `Transforme tes anciennes photos en Reveal immédiat. Compare-les en privé avec un cadrage cohérent, puis conserve toute ton histoire avec Proof Pro.`
 
 **Description — 1,321/4,000**
@@ -206,7 +206,7 @@ sont toujours affichés par l’App Store avant l’achat.
 Proof est un outil visuel de suivi de progression, pas un dispositif médical ni un conseil médical,
 nutritionnel ou sportif.
 
-**Keywords — 95/100 bytes**  
+**Keywords — 95/100 bytes**
 `photos progrès,avant après,transformation,fitness,comparaison,chronologie,privé,replay,corps`
 
 ### German (Germany)
@@ -214,10 +214,10 @@ nutritionnel ou sportif.
 **Name — 20/30**
 `Proof: Body Progress`
 
-**Subtitle — 28/30**  
+**Subtitle — 28/30**
 `Private Vorher-Nachher-Fotos`
 
-**Promotional text — 149/170**  
+**Promotional text — 149/170**
 `Mach aus alten Fortschrittsfotos sofort ein Reveal. Vergleiche privat mit konsistentem Bildausschnitt und behalte mit Proof Pro die ganze Geschichte.`
 
 **Description — 1,185/4,000**
@@ -245,7 +245,7 @@ zeigt immer der App Store vor dem Kauf an.
 Proof ist ein visuelles Fortschrittswerkzeug, kein Medizinprodukt und keine medizinische,
 Ernährungs- oder Fitnessberatung.
 
-**Keywords — 99/100 bytes**  
+**Keywords — 99/100 bytes**
 `Fortschrittsfotos,vorher nachher,Transformation,Fitness,Vergleich,Verlauf,privat,Replay,Körperfoto`
 
 Apple limit sources: [app information](https://developer.apple.com/help/app-store-connect/reference/app-information/app-information),
