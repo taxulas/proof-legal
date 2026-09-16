@@ -248,6 +248,20 @@ Ernährungs- oder Fitnessberatung.
 **Keywords — 99/100 bytes**
 `Fortschrittsfotos,vorher nachher,Transformation,Fitness,Vergleich,Verlauf,privat,Replay,Körperfoto`
 
+### Prepared localized URLs
+
+Use these existing stable endpoints only after the branch is separately approved and merged. Until
+then they continue to show the unchanged live documents from `main`.
+
+| Locale | Privacy Policy URL | Support URL | Marketing URL |
+|---|---|---|---|
+| English (U.S.) | `https://taxulas.github.io/proof-legal/privacy/` | `https://taxulas.github.io/proof-legal/support/` | `https://taxulas.github.io/proof-legal/` |
+| French | `https://taxulas.github.io/proof-legal/privacy/fr/` | `https://taxulas.github.io/proof-legal/support/fr/` | `https://taxulas.github.io/proof-legal/fr/` |
+| German | `https://taxulas.github.io/proof-legal/privacy/de/` | `https://taxulas.github.io/proof-legal/support/de/` | `https://taxulas.github.io/proof-legal/de/` |
+
+The live copyright field is blank. Its final public owner value must not be fabricated or copied from
+Apple until the owner authorizes that specific publication.
+
 Apple limit sources: [app information](https://developer.apple.com/help/app-store-connect/reference/app-information/app-information),
 [platform version information](https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information).
 
