@@ -337,6 +337,22 @@ automatic release after approval is currently selected; recommend manual release
 
 Apple source checked 2026-09-16: [Submit an in-app purchase](https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-in-app-purchase).
 
+### Prepared subscription localizations
+
+Apple's limits checked 2026-09-16 are 30 characters for the customer-facing display name and 45
+characters for the description. The group display name remains `Proof Pro` in all three languages.
+
+| Product | Locale | Display name | Description |
+|---|---|---|---|
+| Annual | English (U.S.) | `Proof Pro Yearly` — 16/30 | `Full access to Proof Pro, billed once a year.` — 45/45 |
+| Annual | French | `Proof Pro Annuel` — 16/30 | `Accès complet à Proof Pro, facturé à l’année.` — 45/45 |
+| Annual | German | `Proof Pro Jahresabo` — 19/30 | `Proof Pro komplett, jährlich abgerechnet.` — 41/45 |
+| Monthly | English (U.S.) | `Proof Pro Monthly` — 17/30 | `Full access to Proof Pro, billed every month.` — 45/45 |
+| Monthly | French | `Proof Pro Mensuel` — 17/30 | `Accès complet à Proof Pro, facturé au mois.` — 43/45 |
+| Monthly | German | `Proof Pro Monatsabo` — 19/30 | `Proof Pro komplett, monatlich abgerechnet.` — 42/45 |
+
+Limit source: [Apple — In-App Purchase information](https://developer.apple.com/help/app-store-connect/reference/in-app-purchases-and-subscriptions/in-app-purchase-information).
+
 ## Future storefront screenshot shot list
 
 Prepare later from the real Build 12 UI with rights-safe, non-personal source photos. Do not depict a
