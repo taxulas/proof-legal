@@ -4,8 +4,9 @@ Prepared: 2026-09-16
 Scope: preparation only; no merge, publication, App Store Connect write, submission, purchase or build.
 
 This document is intentionally safe for a public pull request. It contains no private account value,
-financial value, secret, personal address or phone number. Apple-account values remain marked for an
-authenticated read and must not be copied into this repository without explicit publication approval.
+financial value, secret, personal address or phone number. Apple-account values were read on
+2026-09-16 but are recorded here only as redacted statuses; they must not be copied into this
+repository without explicit publication approval.
 
 ## Locked baselines and publication boundary
 
@@ -27,7 +28,7 @@ authenticated read and must not be copied into this repository without explicit 
 | Delete My Data removes Proof-owned local state, private photos, reminder and owned Replay/export caches. It clears the prior analytics queue and identifier, then may record a new local deletion event. | Build 12 deletion and analytics services | 2026-09-16 | Privacy and Support | Do not claim deletion of exports, backups or provider purchase records. |
 | The weekly reminder is a local iOS notification requested only when enabled; Proof has no push server. | Build 12 notification service | 2026-09-16 | Privacy and App Privacy | Declare no push-notification collection. |
 | RevenueCat is active when the distributed app contains the public Store SDK configuration. It manages offerings, receipts, `proof_pro`, restore and subscription analytics; no custom identity/login call exists in shipping source. | Build 12 billing services and dependency graph | 2026-09-16 | App Privacy | Purchase History; App Functionality + Analytics; not used for tracking; linked-to-identity = No based on anonymous app-user IDs, subject to live/build verification. |
-| A limited local product-event queue always exists. PostHog receives it only if both PostHog build credentials are present. Repository source alone cannot prove whether Build 12 contains them. | Build 12 analytics service and repository scan | 2026-09-16 | App Privacy | `UNKNOWN — NEEDS PROVIDER/OWNER CONFIRMATION` until authenticated build/config evidence is available. |
+| A limited local product-event queue always exists. PostHog receives it only if both PostHog build credentials are present. Build 12's exact Xcode Cloud workflow has no PostHog variables, and the product has no shared environment variables. | Build 12 analytics service, repository scan and authenticated read-only Xcode Cloud configuration | 2026-09-16 | App Privacy | Treat PostHog as inactive in Build 12; do not declare network-collected Product Interaction for this build. |
 | Proof has no user account. iOS uses the system photo picker, and camera permission is requested only when the user chooses the camera. | Build 12 import and camera paths | 2026-09-16 | Privacy, Support, review notes | Avoid instructions that require full Photos-library permission. |
 
 ## French launch conclusions
@@ -86,17 +87,18 @@ accessible information and permission minimisation.
 **DATE CHECKED** — 2026-09-16  
 **APPLICABILITY** — RevenueCat processing is active; PostHog is conditional. Local-only photos are
 not received by the publisher.  
-**OWNER DECISION** — Privacy is `NEEDS OWNER INPUT` until authenticated Apple facts are compared and
-the legally necessary publication values are personally validated.
+**OWNER DECISION** — Privacy is `NEEDS OWNER INPUT` only for the remaining French registration facts
+and explicit authorization to republish legally necessary identity/contact values already held by
+Apple. The owner must not be asked to retype those Apple-held values.
 
 ## Apple seller, account and DSA matrix
 
 | Topic | Current | Recommended | Reason | Confidence | Can write later | Owner decision |
 |---|---|---|---|---|---|---|
-| Account type and legal identity | PENDING AUTHENTICATED READ | Read Apple Developer membership details; do not copy private values here. | Individual seller name is the account holder's legal name. | High | No write planned | Validate only if Apple does not already establish it. |
-| Public developer/seller name | PENDING AUTHENTICATED READ | Keep the live Apple value unless a supported account conversion is later completed. | Apple states that an individual developer name is the legal name. | High | Not in this lot | No invented trading/company name. |
-| DSA trader status | PENDING AUTHENTICATED READ | Read the existing self-assessment and verification state; make no attestation. | Trader status is self-assessed and has public-display consequences in the EU. | High | Yes, in a separately authorized action | Personal legal validation may be required only if Apple has no final choice. |
-| Trader address/PO box, phone, email | PENDING AUTHENTICATED READ | Read status and values; redact them from public evidence. | Apple displays verified trader contact data on EU product pages. | High | Yes, in a separately authorized action | Explicit approval required before any web republication. |
+| Account type and legal identity | Individual membership; legal identity and account contact values populated (redacted here) | Keep the individual account for this lot. | Individual seller name is the account holder's legal name. | High | No write planned | No further identity question is needed. |
+| Public developer/seller name | Matches the individual account identity (redacted here) | Keep the live Apple value unless a supported account conversion is later completed. | Apple states that an individual developer name is the legal name. | High | Not in this lot | No invented trading/company name. |
+| DSA trader status | Trader; compliance active for the 27 EU countries/regions | Preserve the verified status; make no new attestation in this lot. | Trader status has public-display consequences in the EU. | High | Yes, in a separately authorized action | No status question is needed; republication outside Apple remains separate. |
+| Trader address/PO box, phone, email | Apple account contact values exist and the DSA address is populated; exact public product-page rendering is not yet observable before publication (values redacted here) | Preserve Apple-held values; do not copy them into public Git history without express approval. | Apple displays verified trader contact data on EU product pages. | High for stored values; medium for eventual rendering | Yes, in a separately authorized action | Explicit approval required before web republication outside Apple's existing compliance flow. |
 | Individual → Organization | Future scenario only | Consider only after a real eligible legal entity exists. | Apple requires organization eligibility, founder/cofounder authority, D‑U‑N‑S and supporting documents. | High | No | No conversion now. |
 | D‑U‑N‑S | Not required for an individual account | Obtain only for a future eligible organization. | Apple says individuals do not need a D‑U‑N‑S number; sole proprietors enroll as individuals. | High | No | Do not apply in this lot. |
 
@@ -130,8 +132,8 @@ except keywords, which are UTF‑8 bytes.
 
 ### English (U.S.)
 
-**Name — 5/30**  
-`Proof`
+**Name — 20/30**
+`Proof: Body Progress`
 
 **Subtitle — 29/30**  
 `Private before & after photos`
@@ -168,8 +170,8 @@ Proof is a visual progress tool, not a medical device or medical, nutritional or
 
 ### French (France)
 
-**Name — 5/30**  
-`Proof`
+**Name — 20/30**
+`Proof: Body Progress`
 
 **Subtitle — 26/30**  
 `Photos avant/après privées`
@@ -209,8 +211,8 @@ nutritionnel ou sportif.
 
 ### German (Germany)
 
-**Name — 5/30**  
-`Proof`
+**Name — 20/30**
+`Proof: Body Progress`
 
 **Subtitle — 28/30**  
 `Private Vorher-Nachher-Fotos`
@@ -253,8 +255,8 @@ Apple limit sources: [app information](https://developer.apple.com/help/app-stor
 
 | Field | Current | Recommended | Reason | Confidence | Can write later | Owner decision |
 |---|---|---|---|---|---|---|
-| Primary category | PENDING AUTHENTICATED READ | Health & Fitness | Core use is private visual fitness/body-progress tracking. | High | Yes | Confirm after live declarative consequences are visible. |
-| Secondary category | PENDING AUTHENTICATED READ | Photo & Video | Capture, import, comparison, masking and Replay are meaningful secondary functions. | High | Yes | Confirm after live declarative consequences are visible. |
+| Primary category | Unset | Health & Fitness | Core use is private visual fitness/body-progress tracking. The live form requires a medical-device declaration for this category. | High | Yes | Personally confirm the truthful non-medical-device declaration before a later write. |
+| Secondary category | Unset | Photo & Video | Capture, import, comparison, masking and Replay are meaningful secondary functions. | High | Yes | No additional factual input required. |
 
 ## 2026 age-rating questionnaire — prepared answers
 
@@ -288,11 +290,11 @@ Sources checked 2026-09-16: [age-rating definitions](https://developer.apple.com
 
 | Data type / field | Current | Recommended | Reason | Confidence | Can write later | Owner decision |
 |---|---|---|---|---|---|---|
-| Photos | PENDING AUTHENTICATED READ | Not collected | Photos remain on-device and are not transmitted to Proof or providers by the normal product flow. | High | Yes | Keep unless live evidence contradicts. |
-| Purchase History | PENDING AUTHENTICATED READ | Collected; App Functionality + Analytics; not used for tracking | RevenueCat processes receipt/subscription information to operate Pro and subscription analytics. | High | Yes | Confirm live provider configuration. |
-| Purchase History linked to identity | PENDING AUTHENTICATED READ | No | Shipping code uses RevenueCat's anonymous app-user ID and has no account/custom identity call. | Medium-high | Yes | Change only if live/provider evidence shows identity mapping. |
-| Product Interaction (Usage Data) | PENDING AUTHENTICATED READ | Declare only if PostHog is present in Build 12; Analytics; not linked; not tracking | Local-only events are not “collected”; network collection is conditional on distributed-build credentials. | Medium | Yes | `UNKNOWN — NEEDS PROVIDER/OWNER CONFIRMATION`. |
-| Tracking | PENDING AUTHENTICATED READ | No | Neither RevenueCat nor conditional PostHog is used to track users across other companies' apps/sites. | High | Yes | Confirm live SDK configuration. |
+| Photos | Questionnaire not started | Not collected | Photos remain on-device and are not transmitted to Proof or providers by the normal product flow. | High | Yes | No additional factual input required. |
+| Purchase History | Questionnaire not started | Collected; App Functionality + Analytics; not used for tracking | RevenueCat processes receipt/subscription information to operate Pro and subscription analytics. The distributed workflow contains the RevenueCat configuration. | High | Yes | No additional factual input required. |
+| Purchase History linked to identity | Questionnaire not started | No | Shipping code uses RevenueCat's anonymous app-user ID and has no account/custom identity call. | Medium-high | Yes | Change only if a future provider configuration introduces identity mapping. |
+| Product Interaction (Usage Data) | Questionnaire not started | Not collected for Build 12 | The events remain local because Build 12's workflow and shared variables contain no PostHog configuration. | High | Yes | Reassess for any later build that adds both PostHog variables. |
+| Tracking | Questionnaire not started | No | RevenueCat is not used to track users across other companies' apps/sites; PostHog is inactive in Build 12. | High | Yes | No additional factual input required. |
 
 RevenueCat source checked 2026-09-16: [Apple App Privacy guidance](https://www.revenuecat.com/docs/platform-resources/apple-platform-resources/apple-app-privacy).
 Apple source checked 2026-09-16: [Manage app privacy](https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy).
@@ -316,18 +318,21 @@ archive. Delete My Data is also in You, affects local Proof-owned data and does 
 Store subscription. Proof is not a medical device and does not provide diagnostic, medical,
 nutritional or fitness advice.
 
-**Review contact, sign-in and attachments** — PENDING AUTHENTICATED READ. No demo account is needed.
-Do not add personal contact values or attachments to public evidence.
+**Review contact, sign-in and attachments** — The live version incorrectly has “Sign-in required”
+enabled while its username/password, review contact, notes and attachment are blank. No demo account
+is needed. A later authorized write should disable sign-in required, add the prepared notes and use an
+appropriate private review contact without exposing it in public evidence. No build is selected and
+automatic release after approval is currently selected; recommend manual release for the first launch.
 
 ## Subscription checklist
 
 | Field | Current | Recommended | Reason | Confidence | Can write later | Owner decision |
 |---|---|---|---|---|---|---|
-| Subscription group | PENDING AUTHENTICATED READ | One group containing Annual and Monthly | Shipping product contract uses one `proof_pro` entitlement. | High | Yes | Verify names/status live. |
-| Annual product | PENDING AUTHENTICATED READ | Present, localized EN/FR/DE, review-ready if all fields complete | Annual is the primary presentation in the product contract; no fixed price claim in metadata. | High | Yes | No price change in this lot. |
-| Monthly product | PENDING AUTHENTICATED READ | Present, localized EN/FR/DE, review-ready if all fields complete | Monthly is the alternative launch product. | High | Yes | No price change in this lot. |
-| Free trial / introductory offer | PENDING AUTHENTICATED READ | Make no trial claim | No trial is confirmed in the product contract. | High | Yes | Do not create an offer in this lot. |
-| Review screenshots | PENDING AUTHENTICATED READ | Verify a rights-safe purchase-screen screenshot for each product as Apple requires | Subscription review assets are separate from storefront screenshots. | High | Yes | Do not upload in this lot. |
+| Subscription group | One group, Proof Pro; finalize-before-submission status | Keep one group containing Annual and Monthly | Shipping product contract uses one `proof_pro` entitlement. | High | Yes | No additional factual input required. |
+| Annual product | Present; one-year duration; English (U.S.) only: “Proof Pro Yearly” / “Full access to Proof Pro, billed once a year.”; finalize-before-submission status | Add factually equivalent FR/DE localizations; preserve price and product ID | Annual is the primary presentation in the product contract; no fixed price claim in metadata. | High | Yes | No price change in this lot. |
+| Monthly product | Present; one-month duration; English (U.S.) only: “Proof Pro Monthly” / “Full access to Proof Pro, billed every month.”; finalize-before-submission status | Add factually equivalent FR/DE localizations; preserve price and product ID | Monthly is the alternative launch product. | High | Yes | No price change in this lot. |
+| Free trial / introductory offer | None | Make no trial claim | No trial is configured. | High | Yes | Do not create an offer in this lot. |
+| Review screenshots | Present for both products; review notes blank | Preserve the existing rights-safe captures and add concise review notes if later needed | Subscription review assets are separate from storefront screenshots. | High | Yes | Do not upload in this lot. |
 | First subscription submission | Not submitted in this lot | Submit with the app version when later authorized | Apple requires the first auto-renewable subscription to accompany a new app version. | High | Yes | Separate future authorization. |
 
 Apple source checked 2026-09-16: [Submit an in-app purchase](https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-in-app-purchase).
@@ -349,31 +354,40 @@ price or free trial.
 Apple currently permits 1–10 screenshots per supported device display. Verify live device slots and
 use Apple's listed pixel dimensions before production: [screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications).
 
-## Authenticated read-only inventory still required
+## Authenticated read-only inventory — completed 2026-09-16
 
-Every line below is read-only and must be completed from Apple before any human fact request:
+Every line below was read without saving, publishing, submitting, selecting a build or changing a
+commercial value. Private values are intentionally reduced to status-only evidence.
 
 | Field | Current | Recommended | Reason | Confidence | Can write later | Owner decision |
 |---|---|---|---|---|---|---|
-| Membership identity, entity type, seller/developer name | PENDING AUTHENTICATED READ | Compare to Apple rules above | Establishes the actual publisher facts. | High | No write in this lot | Ask only if Apple is incomplete. |
-| DSA trader choice, verification, public contact values | PENDING AUTHENTICATED READ | Compare to launch obligations; redact evidence | Determines EU availability/display readiness. | High | No write in this lot | Personal validation only if legally required. |
-| Agreements, tax and banking status | PENDING AUTHENTICATED READ | Record statuses only, not sensitive financial values | Paid apps/subscriptions depend on active agreements. | High | No write in this lot | Ask only about unresolved actions. |
-| Territories, availability, prices and platforms | PENDING AUTHENTICATED READ | Preserve live commercial values; no change | Needed for accurate readiness and metadata claims. | High | No write in this lot | No start date by default. |
-| Version metadata/localizations/review information | PENDING AUTHENTICATED READ | Diff against this packet | Avoids overwriting good existing values. | High | No write in this lot | Approve later write set separately. |
-| Categories, age rating, compliance and App Privacy | PENDING AUTHENTICATED READ | Diff against prepared answers | Ensures declarations match Build 12. | High | No write in this lot | Validate irreducible attestations only. |
-| Annual, Monthly, group, localizations and review captures | PENDING AUTHENTICATED READ | Diff against subscription checklist | Needed for first subscription readiness. | High | No write in this lot | No price/offer action. |
-| Build 12 processing state and selectable version | PENDING AUTHENTICATED READ | Confirm candidate availability only | Establishes submission readiness without selecting it. | High | No write in this lot | No selection or submission. |
+| Membership identity, entity type, seller/developer name | Individual membership active; legal identity populated; agreements accepted (identity redacted) | Preserve | Establishes the actual publisher facts. | High | No write in this lot | No further identity question. |
+| DSA trader choice, verification, public contact values | Trader compliance active for all 27 EU countries/regions; address present; account contact values present (all redacted) | Preserve; separately authorize any republication outside Apple | Determines EU availability/display readiness. | High | No write in this lot | Publication consent only. |
+| Agreements, tax and banking status | Free and Paid Apps agreements active; foreign-status and W-8BEN tax forms active; one French bank account active | Preserve statuses; never expose account details | Paid apps/subscriptions depend on active agreements. | High | No write in this lot | No unresolved Apple action observed. |
+| Territories, availability, prices and platforms | App price and availability are unset; public distribution selected; Mac compatibility enabled; Vision Pro marked incompatible. Both subscriptions cover 175 countries/regions. Visible reference prices are USD 34.99 / 5.99 and Germany EUR 39.99 / 6.99 for Annual / Monthly. | Preserve subscription prices; configure app availability only in a later authorized launch action | Needed for accurate readiness and metadata claims. | High | No write in this lot | No start date needed for this packet. |
+| Version metadata/localizations/review information | Only English (U.S.) exists; name is populated, all other prepared text fields and storefront captures are blank; review contact/notes blank; sign-in required incorrectly enabled | Use the prepared EN/FR/DE copy, review notes and future shot list | Avoids overwriting good existing values. | High | No write in this lot | Approve later write set separately. |
+| Categories, age rating, compliance and App Privacy | Categories unset; age rating, content rights and medical-device declaration unconfigured; standard Apple EULA; App Privacy questionnaire and URLs blank | Use the prepared truthful answers | Ensures declarations match Build 12. | High | No write in this lot | Non-medical-device attestation requires personal validation. |
+| Annual, Monthly, group, localizations and review captures | Group and both products exist; English only; both review captures present; no introductory offers | Add FR/DE localizations later; preserve products, prices and captures | Needed for first subscription readiness. | High | No write in this lot | No price/offer action. |
+| Build 12 processing state and selectable version | Validated, selectable and ready to submit in TestFlight; iPhone/arm64/iOS 16.4 minimum; EN/FR/DE; no non-exempt encryption; not selected on version 1.0 | Keep as candidate without selecting it | Establishes submission readiness without selecting it. | High | No write in this lot | No selection or submission. |
 
-## Readiness state before the authenticated read
+## Readiness state after the authenticated read
 
-- Privacy: **NEEDS OWNER INPUT** — not because values should be retyped, but because authenticated
-  Apple facts, PostHog-in-Build-12 status and any legally indispensable publication consent remain to
-  be resolved.
+- Privacy: **NEEDS OWNER INPUT** — only the actual French registration facts and explicit consent for
+  any public republication of Apple-held identity/contact values remain; none must be retyped.
 - Terms: **READY** as a factual product document, subject to normal legal review.
 - Support: **READY** as factual product guidance.
-- Metadata: **PREPARED**; live values and form consequences remain to be compared read-only.
-- App Privacy: **BLOCKED** from final declaration until PostHog Build 12 status and existing Apple
-  selections are read.
+- Metadata: **READY TO ENTER LATER**; the prepared copy is within limits and the live gaps are known.
+- App Privacy: **READY TO ENTER LATER** for Build 12; the questionnaire is currently blank and PostHog
+  is inactive in the distributed workflow.
+- Submission: **NOT READY** — required metadata, localizations, age/compliance answers, privacy,
+  categories, app availability, screenshots, review contact/notes, build selection and subscription
+  submission links remain unwritten by design.
 
 No legal/tax/social regime has been selected. No Apple value has been changed or attested. No
 publication, merge or submission is authorized by this packet.
+
+`PROOF-LEGAL MERGED: NO`
+
+`PUBLISHED: NO`
+
+`ASC WRITES: NONE`
