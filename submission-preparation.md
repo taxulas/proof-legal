@@ -42,8 +42,9 @@ filing window, not a recommendation to launch before the legal and Store disclos
 **DATE CHECKED** — 2026-09-16
 **APPLICABILITY** — Relevant only if/when commercial activity is carried on in France as a sole
 proprietor.
-**OWNER DECISION** — No start date is needed for this preparation packet. Decide timing only when a
-specific filing or commercial-opening decision is actually made.
+**OWNER DECISION** — No registration fact or identifier is authorized for public evidence in this
+lot. No start date is needed for this preparation packet. Applicable registration facts and resulting
+public identifiers must be resolved before a commercial publication decision.
 
 ### Required professional-site information
 
@@ -55,9 +56,10 @@ hosting information and additional registration/VAT/activity details when applic
 **APPLICABILITY** — Applies to a professional public site; the exact set depends on the operator's
 actual registration and activity. GitHub's public privacy notice does not supply a usable hosting
 support telephone number, so the host-notice implementation is not yet safely complete.
-**OWNER DECISION** — Do not insert personal coordinates or invented registration data. Preserve the
-current live controller/contact section and add the complete notice only after existing Apple values
-have been read and publication of each value has been expressly approved.
+**OWNER DECISION** — No Apple-held legal identity or contact value is authorized for republication in
+this public branch or on GitHub Pages. Preserve the current controller/contact section and the
+existing public Proof email. Apply the exact future patch set below only after all legal facts are
+complete and a separate publication decision has been made.
 
 ### Sole proprietor, micro regime and company
 
@@ -75,8 +77,9 @@ conditions depend on the real situation.
 **SOURCE** — [Service-Public — Domicilier une entreprise individuelle](https://entreprendre.service-public.fr/vosdroits/F2160?quest0=0)
 **DATE CHECKED** — 2026-09-16
 **APPLICABILITY** — Relevant before completing mandatory public notices or trader coordinates.
-**OWNER DECISION** — Do not publish any address from Apple merely because it is readable there;
-separate factual verification from authorization to republish.
+**OWNER DECISION** — No Apple-held address may be republished. Before publication, separately choose
+an authorized professional/domiciliation address and, if relevant, an appropriate DSA postal address
+or PO box.
 
 ### Privacy-controller transparency
 
@@ -87,9 +90,10 @@ accessible information and permission minimisation.
 **DATE CHECKED** — 2026-09-16
 **APPLICABILITY** — RevenueCat processing is active; PostHog is conditional. Local-only photos are
 not received by the publisher.
-**OWNER DECISION** — Privacy is `NEEDS OWNER INPUT` only for the remaining French registration facts
-and explicit authorization to republish legally necessary identity/contact values already held by
-Apple. The owner must not be asked to retype those Apple-held values.
+**OWNER DECISION** — Apple-held identity/contact values were verified privately but may not be
+republished. The factual privacy text is ready; the complete legal notice is blocked until French
+registration and authorized public coordinates exist. The owner must not be asked to retype the
+Apple-held values.
 
 ## Apple seller, account and DSA matrix
 
@@ -98,9 +102,45 @@ Apple. The owner must not be asked to retype those Apple-held values.
 | Account type and legal identity | Individual membership; legal identity and account contact values populated (redacted here) | Keep the individual account for this lot. | Individual seller name is the account holder's legal name. | High | No write planned | No further identity question is needed. |
 | Public developer/seller name | Matches the individual account identity (redacted here) | Keep the live Apple value unless a supported account conversion is later completed. | Apple states that an individual developer name is the legal name. | High | Not in this lot | No invented trading/company name. |
 | DSA trader status | Trader; compliance active for the 27 EU countries/regions | Preserve the verified status; make no new attestation in this lot. | Trader status has public-display consequences in the EU. | High | Yes, in a separately authorized action | No status question is needed; republication outside Apple remains separate. |
-| Trader address/PO box, phone, email | Apple account contact values exist and the DSA address is populated; exact public product-page rendering is not yet observable before publication (values redacted here) | Preserve Apple-held values; do not copy them into public Git history without express approval. | Apple displays verified trader contact data on EU product pages. | High for stored values; medium for eventual rendering | Yes, in a separately authorized action | Explicit approval required before web republication outside Apple's existing compliance flow. |
+| Trader address/PO box, phone, email | Apple account contact values exist and the DSA address is populated; exact public product-page rendering is not yet observable before publication (values redacted here) | Preserve privately; do not copy any of them into public Git history or Pages. | Apple displays verified trader contact data on EU product pages. | High for stored values; medium for eventual rendering | Yes, only after a new explicit authorization | Republication refused for this lot; a professional address or appropriate DSA postal option will be decided separately. |
 | Individual → Organization | Future scenario only | Consider only after a real eligible legal entity exists. | Apple requires organization eligibility, founder/cofounder authority, D‑U‑N‑S and supporting documents. | High | No | No conversion now. |
 | D‑U‑N‑S | Not required for an individual account | Obtain only for a future eligible organization. | Apple says individuals do not need a D‑U‑N‑S number; sole proprietors enroll as individuals. | High | No | Do not apply in this lot. |
+
+## Exact future legal-notice patch set — not applied
+
+This is a deterministic change set, not a deployable placeholder. No file or visible HTML is changed
+until every required value exists and the owner expressly authorizes its publication.
+
+Publication gates:
+
+1. the applicable registration, SIREN, RNE/RCS and VAT facts have been finalized;
+2. a professional or domiciliation address has been selected for public use;
+3. the public telephone choice has been approved;
+4. the hosting notice has been legally reviewed, including a usable host address and telephone;
+5. the exact final values and destinations have received a new publication authorization.
+
+The future patch must be atomic:
+
+1. Create `legal/index.html`, `legal/fr/index.html` and `legal/de/index.html`, using the existing
+   language-specific page shell and stylesheet. Each page must contain only verified, authorized
+   values for the operator identity, current legal/business status, applicable registration and VAT
+   identifiers, approved professional address, approved public telephone, the existing public Proof
+   email, publication director and hosting identity/contact information.
+2. Add reciprocal `en`, `fr` and `de` `hreflang` links to those three new pages.
+3. In `privacy/index.html`, insert the link to `/proof-legal/legal/` immediately after the paragraph
+   under `<h2>Who is responsible</h2>` and before `<h2>Data stored on your iPhone</h2>`.
+4. In `privacy/fr/index.html`, insert the link to `/proof-legal/legal/fr/` immediately after the
+   paragraph under `<h2>Qui est responsable</h2>` and before `<h2>Données stockées sur ton iPhone</h2>`.
+5. In `privacy/de/index.html`, insert the link to `/proof-legal/legal/de/` immediately after the
+   paragraph under `<h2>Wer verantwortlich ist</h2>` and before
+   `<h2>Auf deinem iPhone gespeicherte Daten</h2>`.
+6. Add the localized legal-notice link immediately before the existing Privacy/Confidentialité/
+   Datenschutz link in the footer of all 12 current HTML pages.
+7. Update the visible dates on every modified page, then rerun the HTML, local-link, `hreflang`,
+   trilingual-parity, sensitive-data authorization and `git diff --check` validations.
+
+Do not implement a partial version of this patch and do not commit example values, substitution
+tokens, comments containing personal data or inactive hidden HTML.
 
 Sources checked 2026-09-16:
 
@@ -269,7 +309,7 @@ Apple limit sources: [app information](https://developer.apple.com/help/app-stor
 
 | Field | Current | Recommended | Reason | Confidence | Can write later | Owner decision |
 |---|---|---|---|---|---|---|
-| Primary category | Unset | Health & Fitness | Core use is private visual fitness/body-progress tracking. The live form requires a medical-device declaration for this category. | High | Yes | Personally confirm the truthful non-medical-device declaration before a later write. |
+| Primary category | Unset | Health & Fitness | Core use is private visual fitness/body-progress tracking. The live form requires a medical-device declaration for this category. | High | Yes | Confirmed by the owner on 2026-09-16: Proof is not intended or presented as a medical device and does not claim to diagnose, prevent or treat disease. |
 | Secondary category | Unset | Photo & Video | Capture, import, comparison, masking and Replay are meaningful secondary functions. | High | Yes | No additional factual input required. |
 
 ## 2026 age-rating questionnaire — prepared answers
@@ -396,19 +436,22 @@ commercial value. Private values are intentionally reduced to status-only eviden
 | Agreements, tax and banking status | Free and Paid Apps agreements active; foreign-status and W-8BEN tax forms active; one French bank account active | Preserve statuses; never expose account details | Paid apps/subscriptions depend on active agreements. | High | No write in this lot | No unresolved Apple action observed. |
 | Territories, availability, prices and platforms | App price and availability are unset; public distribution selected; Mac compatibility enabled; Vision Pro marked incompatible. Both subscriptions cover 175 countries/regions. Visible reference prices are USD 34.99 / 5.99 and Germany EUR 39.99 / 6.99 for Annual / Monthly. | Preserve subscription prices; configure app availability only in a later authorized launch action | Needed for accurate readiness and metadata claims. | High | No write in this lot | No start date needed for this packet. |
 | Version metadata/localizations/review information | Only English (U.S.) exists; name is populated, all other prepared text fields and storefront captures are blank; review contact/notes blank; sign-in required incorrectly enabled | Use the prepared EN/FR/DE copy, review notes and future shot list | Avoids overwriting good existing values. | High | No write in this lot | Approve later write set separately. |
-| Categories, age rating, compliance and App Privacy | Categories unset; age rating, content rights and medical-device declaration unconfigured; standard Apple EULA; App Privacy questionnaire and URLs blank | Use the prepared truthful answers | Ensures declarations match Build 12. | High | No write in this lot | Non-medical-device attestation requires personal validation. |
+| Categories, age rating, compliance and App Privacy | Categories unset; age rating, content rights and medical-device declaration unconfigured; standard Apple EULA; App Privacy questionnaire and URLs blank | Use the prepared truthful answers | Ensures declarations match Build 12. | High | No write in this lot | Non-medical-device facts personally confirmed on 2026-09-16; no attestation was written in Apple. |
 | Annual, Monthly, group, localizations and review captures | Group and both products exist; English only; both review captures present; no introductory offers | Add FR/DE localizations later; preserve products, prices and captures | Needed for first subscription readiness. | High | No write in this lot | No price/offer action. |
 | Build 12 processing state and selectable version | Validated, selectable and ready to submit in TestFlight; iPhone/arm64/iOS 16.4 minimum; EN/FR/DE; no non-exempt encryption; not selected on version 1.0 | Keep as candidate without selecting it | Establishes submission readiness without selecting it. | High | No write in this lot | No selection or submission. |
 
 ## Readiness state after the authenticated read
 
-- Privacy: **NEEDS OWNER INPUT** — only the actual French registration facts and explicit consent for
-  any public republication of Apple-held identity/contact values remain; none must be retyped.
+- Privacy: **BLOCKED FOR MERGE/PUBLICATION** — the factual product/privacy text is ready, but the
+  registration and authorized public-coordinate prerequisites are not complete for publication. The
+  exact future patch set is documented above without placeholders.
 - Terms: **READY** as a factual product document, subject to normal legal review.
 - Support: **READY** as factual product guidance.
 - Metadata: **READY TO ENTER LATER**; the prepared copy is within limits and the live gaps are known.
 - App Privacy: **READY TO ENTER LATER** for Build 12; the questionnaire is currently blank and PostHog
   is inactive in the distributed workflow.
+- Health & Fitness declaration: **READY TO ENTER LATER**; the owner confirmed the non-medical-device
+  facts, but no Apple attestation or category write is authorized in this lot.
 - Submission: **NOT READY** — required metadata, localizations, age/compliance answers, privacy,
   categories, app availability, screenshots, review contact/notes, build selection and subscription
   submission links remain unwritten by design.
