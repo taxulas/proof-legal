@@ -26,13 +26,13 @@
 
 <h1>Politique de confidentialité</h1>
 <p class="lede">Proof est conçu pour que tes photos restent sur ton iPhone.</p>
-<p class="meta">Dernière mise à jour : 2026-09-06</p>
+<p class="meta">Dernière mise à jour : 2026-09-24</p>
 
 <div class="card">
 <p><strong>En résumé.</strong> Proof stocke tes photos et ta progression dans l’espace privé de
 l’application sur ton iPhone. Aucun compte n’est nécessaire. Tes photos ne sont pas envoyées vers un
 serveur de Proof. Toute l’analyse d’image s’exécute sur ton appareil. Il n’y a ni publicité, ni
-pistage publicitaire. Tu peux tout effacer depuis l’application.</p>
+pistage publicitaire. Tu peux effacer tes contenus locaux depuis l’application.</p>
 </div>
 
 <h2>Qui est responsable</h2>
@@ -59,7 +59,7 @@ iPhone, protégé par le bac à sable d’iOS et par le chiffrement de ton appar
   techniques comme « application ouverte », « photo sélectionnée » ou « analyse terminée », avec de
   petites valeurs non identifiantes telles qu’un nombre ou un score. Ils sont conservés dans une file
   locale sur l’appareil, limitée aux 250 entrées les plus récentes. <strong>Dans la version
-  actuelle, ils ne sont transmis nulle part</strong> — voir « Composants inclus mais inactifs »
+  actuelle, ils ne sont transmis nulle part</strong> — voir « Analyse d’usage produit »
   ci-dessous.</li>
 </ul>
 
@@ -95,40 +95,37 @@ Aucun serveur de notification push n’est utilisé, et aucun contenu de notific
 iPhone.</p>
 
 <h2>Achats</h2>
-<p>Tout abonnement ou achat proposé dans Proof est vendu via l’App Store d’Apple. Apple traite le
-paiement et la relation de facturation. Proof ne voit ni ne conserve ta carte bancaire, et ne reçoit
-d’Apple aucune donnée de paiement. Le traitement de ces données par Apple relève de la
-<a href="https://www.apple.com/legal/privacy/" rel="noopener">politique de confidentialité
-d’Apple</a>.</p>
+<p>Les abonnements Annual et Monthly de Proof sont vendus via l’App Store d’Apple. Apple gère le
+paiement et la facturation ; Proof ne reçoit ni ne conserve tes données de carte bancaire. Voir la
+<a href="https://www.apple.com/legal/privacy/" rel="noopener">politique de confidentialité d’Apple</a>.</p>
+<p><strong>RevenueCat est actif</strong> pour valider les achats, gérer l’état des abonnements et
+restaurer l’accès à Proof Pro. L’application utilise un App User ID RevenueCat anonyme généré
+aléatoirement ; Proof ne transmet à RevenueCat ni nom, ni adresse e-mail, ni identifiant de compte
+Proof. RevenueCat traite cet identifiant, les informations de produit et de transaction ou de reçu,
+l’état des droits d’accès et les informations techniques nécessaires à son SDK, comme le type
+d’appareil et le système d’exploitation. Cela implique des échanges avec le service RevenueCat.
+Proof ne lui transmet ni photos, ni copies masquées, ni analyses visuelles, ni données de progression
+stockées localement. Voir la <a href="https://www.revenuecat.com/privacy-policy/"
+rel="noopener">politique de confidentialité de RevenueCat</a>.</p>
 
-<h2>Composants inclus mais inactifs</h2>
-<p>Il nous semble plus loyal de t’indiquer ce que contient l’application plutôt que de décrire
-uniquement ce qui s’exécute. L’application contient actuellement deux composants tiers qui ne sont
-<strong>ni configurés ni actifs dans la version publiée</strong>, faute d’identifiants compilés dans
-la build :</p>
-<ul>
-  <li><strong>Un SDK d’achat (RevenueCat).</strong> Inclus pour permettre les abonnements, mais non
-  initialisé dans la version actuelle. Il ne traite donc aucune donnée et n’effectue aucune requête
-  réseau. S’il était activé dans une version future, il recevrait les données d’achat et les données
-  techniques d’appareil nécessaires à la validation d’un abonnement — jamais tes photos.</li>
-  <li><strong>Une intégration d’analyse produit (PostHog).</strong> Présente dans le code mais
-  désactivée : les événements d’usage restent donc dans la file locale décrite plus haut et aucune
-  requête d’analytics n’est envoyée. Si elle était un jour activée, elle recevrait uniquement les
-  événements d’usage produit décrits plus haut, sous un identifiant aléatoire généré sur l’appareil
-  — jamais tes photos, ni leur analyse.</li>
-</ul>
-<p>Cette page sera mise à jour avant qu’un tel composant ne devienne actif dans une version publiée.</p>
+<h2>Analyse d’usage produit</h2>
+<p>L’intégration PostHog est présente dans le code, mais n’est pas configurée dans cette build. Les
+événements d’usage restent dans la file locale décrite plus haut ; Proof n’envoie aucune requête
+d’analyse à PostHog. Ce fonctionnement est distinct du service d’abonnement RevenueCat, qui est actif.</p>
 
 <h2>Conservation</h2>
-<p>Tes données restent sur ton appareil jusqu’à ce que tu les supprimes. Proof n’applique aucune durée
-de conservation côté serveur, puisqu’il ne conserve rien sur un serveur. Supprimer l’application de
-ton iPhone efface son stockage privé, y compris tes photos et tes analyses.</p>
+<p>Tes photos, analyses, copies masquées et données de progression locales restent sur ton appareil
+jusqu’à ce que tu les supprimes. Supprimer Proof de ton iPhone efface son stockage privé local. Les
+données d’abonnement et de transaction traitées par Apple et RevenueCat sont distinctes de ce
+stockage ; supprimer l’application ne résilie pas l’abonnement et n’efface pas ces données. Leur
+conservation dépend de leurs politiques respectives.</p>
 
 <h2>Supprimer tes données</h2>
-<p>Tu peux tout effacer depuis l’application, dans les réglages, via l’option de suppression de toutes
-les données. Cela efface l’état enregistré et supprime l’intégralité du dossier photo privé,
-ramenant l’application à l’état d’une installation neuve. Seule la langue d’interface que tu as
-choisie est conservée : c’est une préférence, pas une donnée personnelle.</p>
+<p>Tu peux effacer tes contenus locaux depuis l’application, dans les réglages, via l’option de
+suppression de toutes les données. Cela efface l’état enregistré et l’intégralité du dossier photo
+privé, ramenant l’application à l’état d’une installation neuve. La langue d’interface choisie est
+conservée. Cette action ne résilie pas un abonnement Apple et n’efface pas les données de transaction
+conservées par Apple ou RevenueCat.</p>
 
 <h2>Sécurité</h2>
 <p>Tes données sont conservées dans le stockage cloisonné de l’application, que les autres
@@ -145,14 +142,13 @@ sauvegarde.</p>
 <p>Si tu te trouves dans l’Espace économique européen ou au Royaume-Uni, le droit de la protection des
 données te reconnaît des droits d’accès, de rectification, d’effacement, de limitation, d’opposition
 et de portabilité.</p>
-<p>Comme Proof conserve tes photos, tes analyses et tes réglages uniquement sur ton propre appareil et
-ne nous en transmet rien, nous ne détenons aucune copie de tes données et n’avons aucun moyen de
-t’identifier ni de récupérer, exporter ou supprimer tes informations à ta place. Concrètement, tu
-exerces ces droits directement et immédiatement dans l’application : tes données y sont visibles, tu
-peux les corriger en remplaçant ou en retirant des photos, et tu peux tout effacer via l’option de
-suppression dans les réglages. Si tu estimes qu’un point de cette politique est inexact, ou si tu as
-une question, écris à <a class="mail" href="mailto:proofapp.contact@gmail.com">proofapp.contact@gmail.com</a>. Tu as également le droit
-d’introduire une réclamation auprès de ton autorité nationale de protection des données.</p>
+<p>Proof ne conserve aucune copie serveur de tes photos, analyses ou données de progression locales.
+Tu peux consulter, exporter ou effacer ces contenus dans l’application. Pour une demande concernant
+les informations d’abonnement traitées par RevenueCat, écris à
+<a class="mail" href="mailto:proofapp.contact@gmail.com">proofapp.contact@gmail.com</a> ; l’App User ID RevenueCat
+anonyme peut être nécessaire pour retrouver le dossier concerné. Apple traite les données de compte
+Apple et de paiement selon sa propre politique. Tu peux également saisir ton autorité nationale de
+protection des données.</p>
 
 <h2>Modifications de cette politique</h2>
 <p>Si cette politique évolue, la version mise à jour sera publiée sur cette page avec une nouvelle
@@ -166,7 +162,7 @@ la publication de la version qui l’introduit.</p>
 <footer><div class="wrap">
   <p>Contact &middot; <a href="mailto:proofapp.contact@gmail.com">proofapp.contact@gmail.com</a></p>
   <p><a href="/proof-legal/privacy/fr/">Confidentialité</a> &middot; <a href="/proof-legal/terms/fr/">Conditions</a> &middot; <a href="/proof-legal/support/fr/">Support</a></p>
-  <p>Dernière mise à jour: 2026-09-06</p>
+  <p>Dernière mise à jour: 2026-09-24</p>
 </div></footer>
 </body>
 </html>
